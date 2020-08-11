@@ -77,13 +77,30 @@ foo@bar:~$ cd wrt-hisicam
 foo@bar:~$ make ubuntu-deps
 foo@bar:~$ make prepare
 foo@bar:~$ cd openwrt
+foo@bar:~$ ./scripts/feeds update -a
+foo@bar:~$ ./scripts/feeds install -a
 foo@bar:~$ make menuconfig
 ```
 
-Select options
+Before comping it is required to configure OpenWrt. This is done in the menu shown with the command make menuconfig.
 
+**Configuration**
+First select the board you would like to compile for.
+<img src="images/selecttarget.png" alt="selecttarget">
+
+Secondly configure the GoHisiCam application
+<img src="images/configuregohisicam.png" alt="configuregohisicam">
+
+Save the configuration and exit the configuration menu. 
+
+**NOTE:** When running the compilation as root it is required to set the following export:
 ```console
-foo@bar:~$ make
+foo@bar:~$ export FORCE_UNSAFE_CONFIGURE=1
+```
+
+Now you are ready to compile the image. The additional parameters are required as a question is asked during compilation.
+```console
+foo@bar:~$ make -j1 V=s
 ```
 
 **TODO**
