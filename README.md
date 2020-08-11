@@ -85,6 +85,7 @@ foo@bar:~$ make menuconfig
 Before comping it is required to configure OpenWrt. This is done in the menu shown with the command make menuconfig.
 
 **Configuration**
+
 First select the board you would like to compile for.
 <img src="images/selecttarget.png" alt="selecttarget">
 
@@ -102,6 +103,9 @@ Now you are ready to compile the image. The additional parameters are required a
 ```console
 foo@bar:~$ make -j1 V=s
 ```
+
+During compilation it is possible an additional enter is required to continue compiling. If the following message occures, press enter to continue.
+<img src="images/configuregohisicam.png" alt="configuregohisicam">
 
 **TODO**
 
