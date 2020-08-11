@@ -76,6 +76,14 @@ foo@bar:~$ git clone --recursive https://github.com/OpenHisiIpCam/wrt-hisicam --
 foo@bar:~$ cd wrt-hisicam
 foo@bar:~$ make ubuntu-deps
 foo@bar:~$ make prepare
+foo@bar:~$ cd openwrt
+foo@bar:~$ make menuconfig
+```
+
+Select options
+
+```console
+foo@bar:~$ make
 ```
 
 **TODO**
